@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="./css/reset.css?v=1.0">
+  <link rel="stylesheet" href="./css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="header">
+    <div class="wrapper">
+      <img src="./images/logo.jpg" alt="Atlassian Logo" />
+    </div>
+  </div>
+
+  <div id="main-wrapper">
+    <div class="wrapper">
+      <!-- Start: Headline -->
+      <div class="headline">
+        <div class="logo-2-wrapper wrapper">
+          <img src="./images/logo_2.jpg" alt="Atlassian Summit" />
+        </div>
+        <h3>Video Archive</h3>
+      </div>
+      <!-- End: Headline -->
+
+      <!-- Start: Content -->
+      <div class="tabbed-content">
+        <div class="radio-tabs">
+          <input class="state" type="radio" title="Keynotes" name="tabbed-state" id="keynotes" />
+          <input class="state" type="radio" title="Software Teams" name="tabbed-state" id="software-teams"  checked />
+          <input class="state" type="radio" title="Collaboration Teams" name="tabbed-state" id="collaboration-teams" />
+          <input class="state" type="radio" title="IT Service Teams" name="tabbed-state" id="it-service-teams" />
+          <input class="state" type="radio" title="Massive Teams" name="tabbed-state" id="massive-teams" />
+          <input class="state" type="radio" title="Platform + APIs" name="tabbed-state" id="platform-api" />
+
+          <div class="tabs">
+            <label for="keynotes" id="keynotes-tab" class="tab">Keynotes</label>
+            <label for="software-teams" id="software-teams-tab" class="tab">Software Teams</label>
+            <label for="collaboration-teams" id="collaboration-teams-tab" class="tab">Collaboration Teams</label>
+            <label for="it-service-teams" id="it-service-teams-tab" class="tab">IT Service Teams</label>
+            <label for="massive-teams" id="massive-teams-tab" class="tab">Massive Teams</label>
+            <label for="platform-api" id="platform-api-tab" class="tab">Platform + APIs</label>
+          </div>
+
+          <div class="panels">
+            <div id="keynotes-panel" class="panel">
+              <p>Keynotes</p>
+            </div>
+            <div id="software-teams-panel" class="panel">
+              <div class="sidebar">
+                <h3 class="atlassian-font">Software Teams</h3>
+                <ul></ul>
+              </div>
+              <div class="sidebar-content">
+                <!-- content here  -->
+              </div>
+            </div>
+            <div id="collaboration-teams-panel" class="panel">
+              <p>Collaboration Teams</p>
+            </div>
+            <div id="it-service-teams-panel" class="panel">
+              <p>IT Services Teams</p>
+            </div>
+            <div id="massive-teams-panel" class="panel">
+              <p>Massive Teams</p>
+            </div>
+            <div id="platform-api-panel" class="panel">
+              <p>Platform API</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Content -->
+    </div>
+  </div>
+  <script type="text/javascript" src="./js/mustache.js"></script>
+  <script type="text/javascript" src="./json/hubb.json"></script>
+  <script type="text/javascript" src="./js/scripts.js"></script>
+
+  <script id="sidebar-item" type="x-tmpl-mustache">
+    <h5 class="atlassian-font">{{Title}}</h5>
+    {{#Author}}
+      <p>{{Author}}</p>
+    {{/Author}}
+  </script>
+
+  <script id="sidebar-main-content" type="x-tmpl-mustache">
+    <h1 class="atlassian-font">{{Title}}</h1>
+    {{#Author}}
+      <p>{{Author}}</p>
+    {{/Author}}
+    <p class="description">{{ Description }}</p>
+  </script>
+</body>
+</html>

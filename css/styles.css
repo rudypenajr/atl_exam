@@ -1,0 +1,199 @@
+body {
+  font-family: Helvetica,Arial,Verdana,sans-serif;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Header */
+#header {
+  background: #205081;
+  height: 47px;
+  overflow: hidden;
+  width: 100%;
+}
+
+#header .wrapper {
+  width: 970px;
+}
+
+#header img {
+  height: 40px;
+  margin: 2px 0 0;
+  width: 134px;
+}
+
+
+/* Main Wrapper */
+#main-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+#main-wrapper .wrapper {
+  /*border: 1px solid red;*/
+  height: 500px;
+  width: 970px;
+}
+
+/* Headline */
+#main-wrapper .logo-2-wrapper {
+  height: 72px;
+  margin-top: 42px;
+  width: 376px;
+}
+
+.logo-2-wrapper img {
+  width: 100%;
+}
+
+.headline {
+  margin-bottom: 46px;
+}
+
+.headline h3 {
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Tabs */
+
+.radio-tabs .state {
+  position: absolute;
+  left: -10000px;
+}
+
+#keynotes:focus ~ .tabs #keynotes-tab,
+#software-teams:focus ~ .tabs #software-teams-tab,
+#collaboration-teams:focus ~ .tabs #collaboration-teams-tab,
+#it-service-teams:focus ~ .tabs #it-service-teams-tab,
+#massive-teams:focus ~ .tabs #massive-teams-tab,
+#platform-api-teams:focus ~ .tabs #platform-api-tab {
+  box-shadow: 0 0 3px 3px rgba(0,127,255,.5);
+}
+
+.tabs {
+  border-bottom: 1px solid #CCC;
+}
+
+.radio-tabs .tab {
+  border-bottom: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  display: inline-block;
+  padding: 12px;
+  vertical-align: top;
+  background-color: #eee;
+  cursor: hand;
+  cursor: pointer;
+  margin-right: -4px;
+  height: 18px;
+  position: relative;
+  top: 1px;
+}
+
+.radio-tabs .tab:hover {
+  background-color: #fff;
+}
+
+#keynotes:checked ~ .tabs #keynotes-tab,
+#software-teams:checked ~ .tabs #software-teams-tab,
+#collaboration-teams:checked ~ .tabs #collaboration-teams-tab,
+#it-service-teams:checked ~ .tabs #it-service-teams-tab,
+#massive-teams:checked ~ .tabs #massive-teams-tab,
+#platform-api-teams:checked ~ .tabs #platform-api-tab {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    cursor: default;
+}
+
+.tabs #keynotes-tab {
+  border-left: 1px solid #CCC;
+  border-top-left-radius: 5px;
+}
+
+.tabs #platform-api-tab {
+  border-top-right-radius: 5px;
+}
+
+.radio-tabs .panels {
+  background-color: #fff;
+  padding: 50px 0;
+}
+.radio-tabs .panel {
+  display: none;
+}
+
+#keynotes:checked ~ .panels #keynotes-panel,
+#software-teams:checked ~ .panels #software-teams-panel,
+#collaboration-teams:checked ~ .panels #collaboration-teams-panel,
+#it-service-teams:checked ~ .panels #it-service-teams-panel,
+#massive-teams:checked ~ .panels #massive-teams-panel,
+#platform-api-teams:checked ~ .panels #platform-api-panel {
+  display: block;
+}
+
+/* Sidebar */
+.atlassian-font {
+  color: #205081;
+  font-family: LLCircularWeb-Bold,'Helvetica Neue',Helvetica,arial,sans-serif;
+}
+
+.sidebar, .sidebar-content {
+  display: inline-block;
+  float: left;
+}
+
+.sidebar {
+  width: 286px;
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  border-top: 1px solid #CCC;
+}
+
+.sidebar li {
+  border-bottom: 1px solid #CCC;
+  padding: 10px 8px;
+}
+
+.sidebar li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background: #eee;
+}
+
+.sidebar li h5 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.sidebar-content {
+  padding: 0 0 0 45px;
+  width: 610px;
+}
+
+.sidebar-content h1 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-bottom: 32px;
+}
+
+.sidebar-content p {
+  color: #404040;
+  line-height: 20px;
+}
