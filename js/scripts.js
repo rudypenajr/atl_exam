@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
+  // start of logic
   if ( jsonData ) {
     var data = jsonData.items;
 
